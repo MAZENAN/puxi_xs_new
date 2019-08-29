@@ -1,0 +1,35 @@
+/* 猜涨跌 */
+@charset "UTF-8";
+*{ padding: 0; margin:0;}
+body{ -webkit-overflow-scrolling:touch; font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif; }
+input, textarea, keygen, select, button{ font-family:微软雅黑; outline:medium;}
+header {width:100%;text-align: center; height:44px; line-height:44px; position:fixed; top:0; z-index:999; box-shadow:0px 2px 2px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: nowrap;
+}
+header>.money{
+width: 44%;
+}
+header>.float-code{
+    width: 70%;
+}
+.sanjiao{
+    display: inline-block;
+    top:0.3rem;
+    position: relative;
+    border-width:0.5rem;
+    border-style: solid;
+    border-color: #000 transparent transparent transparent;
+}
+/* 跌涨块颜色 */
+.fall-color{
+    background: #CF2226;
+    color: #fff;
+   
+}
+.rise-color{
+    background: #19A15F;
+    color: #fff;
+    padding: 3px 10px 3px 10px;
+    border-radius: 3px;
+}

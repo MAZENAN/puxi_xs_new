@@ -1,0 +1,240 @@
+.header {
+	height: 84px;
+	background-color: rgba(255, 255, 255, 0);
+}
+
+.header-conent {
+	overflow: hidden;
+	width: 1200px;
+	height: 84px;
+}
+
+.header-nav {
+	overflow: hidden;
+	height: 84px;
+}
+
+.logo-a {
+	display: inline-block;
+	width: 172px;
+	height: 84px;
+	background: url('../images/part/logo.png') no-repeat 100% 100%;
+}
+
+.logo {
+	width: 172px;
+	height: 84px;
+	padding-top: 26px;
+}
+
+.logo img {
+	width: 152px;
+	height: 33px;
+	margin: 0 auto;
+}
+
+.header-nav li,
+.header-nav a,
+.header-telphone span {
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.header-nav li {
+	cursor: pointer;
+	margin-left: 20px;
+}
+
+.header-nav a {
+	display: block;
+	height: 25px;
+	margin-top: 30px;
+	line-height: 20px;
+}
+
+.header-nav a:hover {
+	animation: headerUnderline 0.3s forwards;
+}
+
+.top-line {
+	width: 2px;
+	height: 14px;
+	margin: 33px 10px 0;
+	background-color: #ffffff;
+}
+
+.header-telphone {
+	height: 84px;
+}
+
+.header-telphone img {
+	width: 17px;
+	height: 17px;
+	margin: 0 15px 0 5px;
+}
+
+a.header-nav-active {
+	border-bottom: 2px solid red;
+	/* color: red; */
+}
+
+
+/*圆圈*/
+
+.circles {
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -42px;
+	margin-left: -43px;
+	z-index: 49;
+	animation-duration: 1.5s;
+	/*指定多少秒完成*/
+	animation-timing-function: linear;
+	/*设置动画将如何完成一个周期*/
+	animation-play-state: running;
+	animation-name: mymove;
+	background: rgba(241, 0, 0, .3);
+}
+
+.circle1 {
+	animation-delay: 0.1s;
+}
+
+.circle2 {
+	animation-delay: 0.6s;
+}
+
+.circle3 {
+	animation-delay: 1.2s;
+}
+
+@keyframes mymove {
+	0% {
+		transform: scale(1);
+		-webkit-transform: scale(1);
+	}
+	20% {
+		transform: scale(1.4);
+		-webkit-transform: scale(1.4);
+	}
+	40% {
+		transform: scale(1.8);
+		-webkit-transform: scale(1.8);
+	}
+	60% {
+		transform: scale(2);
+		-webkit-transform: scale(2);
+	}
+	70% {
+		transform: scale(1.8);
+		-webkit-transform: scale(1.8);
+	}
+	80% {
+		transform: scale(1.4);
+		-webkit-transform: scale(1.4);
+	}
+	90% {
+		transform: scale(1.2);
+		-webkit-transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+		-webkit-transform: scale(1);
+	}
+}
+
+
+/* css3动画 */
+
+
+/* 导航栏渐变 */
+
+@keyframes headerUnderline {
+	from {
+		border-bottom: 1px solid red;
+	}
+	to {
+		border-bottom: 2px solid red;
+		/* color: red; */
+	}
+}
+
+
+/**手机适配*/
+
+@media screen and (max-width: 980px) {
+	.header-conent {
+		width: 90%;
+	}
+}
+
+.nb-icon-wrap {
+	position: fixed;
+	right: 40px !important;
+	bottom: 10% !important;
+	width: 87px !important;
+	height: 87px !important;
+}
+
+#newBridge .nb-icon-skin-xc-0 .nb-icon-inner-wrap {
+	display: block;
+	width: 87px !important;
+	height: 87px !important;
+	border-radius: 50% !important;
+	background: url('../../../public/images/part/service.png') !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	box-shadow: 0 5px 10px 0 rgba(35, 50, 56, .3);
+}
+
+.circle {
+	position: fixed;
+	z-index: 9;
+	right: 40px !important;
+	bottom: 10% !important;
+	width: 87px !important;
+	height: 87px !important;
+}
+
+@media screen and (max-width: 980px) {
+	/*.circle {
+		position: fixed;
+		z-index: 9;
+		right: 40px !important;
+		bottom: 374px !important;
+		width: 87px !important;
+		height: 87px !important;
+	}*/
+	
+	#newBridge .nb-icon-flag-2,#newBridge .nb-icon-flag{
+		display: none !important;
+		padding-bottom: none !important;
+	}
+	#newBridge .nb-icon-wrap-2{
+		position: fixed !important;
+		position: fixed;
+		right: 40px !important;
+		/*bottom: 330px !important;*/
+		bottom: 7.8% !important;
+		width: 87px !important;
+		height: 87px !important;
+		padding-bottom: 0 !important;
+	}
+	#newBridge .nb-icon-right-center{
+		top: auto !important;
+	}
+	#newBridge .nb-icon-wrap-2 .nb-icon-wrap-base{
+		background: url('../../../public/images/part/service.png') !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	box-shadow: 0 5px 10px 0 rgba(35, 50, 56, .3);
+	border-radius: 50% !important;
+	/*margin-top: 43px !important;*/
+	}
+}
