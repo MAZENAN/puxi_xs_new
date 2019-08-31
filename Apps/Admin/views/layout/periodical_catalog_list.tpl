@@ -34,7 +34,6 @@
 <td align="center">{@$rs.sort|sortopt:$rs.id:5@}</td>
 
 <td align="center">
-    <a dialog="1" class="samao-link-minibtn" href="__SELF__/show?id={@$rs.id@}">详情</a>
     <a class="samao-link-minibtn" href="__SELF__/edit?id={@$rs.id@}">编辑</a>
     <a onclick="return confirm('确定要删除吗？一旦删除将无法恢复，请谨慎操作！');" class="samao-link-minibtn" href="__SELF__/delete?id={@$rs.id@}">删除</a>
 </td>

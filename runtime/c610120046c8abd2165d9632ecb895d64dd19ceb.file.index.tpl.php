@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2019-08-29 09:37:59
+<?php /* Smarty version Smarty-3.1.19, created on 2019-08-31 22:18:11
          compiled from ".\Apps\Home\views\index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:182595d672c7768e3c4-28879533%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:119615d6a81a33bdb45-00872599%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c610120046c8abd2165d9632ecb895d64dd19ceb' => 
     array (
       0 => '.\\Apps\\Home\\views\\index.tpl',
-      1 => 1567002119,
+      1 => 1567255089,
       2 => 'file',
     ),
     'c83b1d8e37701e76e6b28125a776fca5ec483540' => 
@@ -17,15 +17,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '182595d672c7768e3c4-28879533',
+  'nocache_hash' => '119615d6a81a33bdb45-00872599',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5d672c776de132_15139429',
+  'unifunc' => 'content_5d6a81a3428405_86118152',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5d672c776de132_15139429')) {function content_5d672c776de132_15139429($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5d6a81a3428405_86118152')) {function content_5d6a81a3428405_86118152($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -43,13 +43,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <!--{{ @include file="libs/header.tpl" @} -->
 
 <header>
-    <div class="welcome">
-        <span class="sessname"></span>
-        <a  href="/account/logout" id="zhuxiao"> 注销</a>
-    </div>
+
+    <?php if (empty($_smarty_tpl->tpl_vars['user']->value['id'])||empty($_smarty_tpl->tpl_vars['user']->value['name'])) {?>
     <div class="login">
-        <a href="account/login{{config('myroute.suffix','html')}}?redirect_url=">登录</a> <a href="account/register">注册</a>
+        <a href="/login/index.html">快速登录</a> <!--<a href="account/register">注册</a>-->
     </div>
+    <?php } else { ?>
+    <div class="welcome">
+        <span class="sessname"><?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
+</span>
+        <a  href="/login/out.html" id="zhuxiao"> 注销</a>
+    </div>
+    <?php }?>
 </header>
 <main>
     <div class="logo">
@@ -62,17 +67,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </main>
 <!--联系我们-->
 <div class="contact_us">
-    <img class="us_img" src="/home/image/icon/guanbi.png" alt="">
+    <img class="us_img" src="/public/images/icon/guanbi.png" alt="">
     <p>普西学术网</p>
-    <p>电话：{{$site->phone}}</p>
+    <p>电话：<?php echo $_smarty_tpl->tpl_vars['customer']->value['tel'];?>
+</p>
 
-    <p>咨询微信：{{$site->wechat}}</p>
+    <p>咨询微信：<?php echo $_smarty_tpl->tpl_vars['customer']->value['weixin'];?>
+</p>
     <!-- <p>投稿邮箱：88888888@qq.com </p> -->
 
 </div>
 <footer>
 
-    <a id="dingyue" class="bot_nav" href="usercenter/collection{{config('myroute.suffix','html')}}">
+    <a id="dingyue" class="bot_nav" href="/user/collect.html">
         <img src="/public/images/home/shoucang.png" alt="">
         <p>订阅收藏</p>
     </a>
@@ -99,13 +106,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     /*搜索*/
     function search(){
         var searchText=$("input[name='inp']").val()
-        searchText = searchText.replace(/[\/]+/g, "")
         if(searchText.length==0){
             alert("输入的内容不能为空");
             return;
         }
         /*跳转传值*/
-        var searchUrl = 'search/' //使用encodeURI编码
+        var searchUrl = '/search/index.html?words=' //使用encodeURI编码
         location.href = searchUrl+encodeURIComponent(searchText);
     }
     /*鼠标点击*/

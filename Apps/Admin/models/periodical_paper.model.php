@@ -116,6 +116,13 @@ class PeriodicalPaperModel extends SmcmsModel {
                 ),
                 'close' => true
             ),
+            'is_classic' => array(
+                'label' => '是否为经典论文',
+                'label_width' => 150,
+                'type' => 'bool',
+                'default' => '0',
+                'tab' => 'base'
+            ),
             'allow' => array(
                 'label' => '是否启用',
                 'label_width' => 150,

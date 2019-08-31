@@ -1,5 +1,5 @@
 <?php
-class IndexController extends Controller {
+class IndexController extends HomeController {
 
     public function indexAction(){
         $this->doact('*');

@@ -73,7 +73,8 @@ class DocumentModel extends SmcmsModel {
                 'label_width' => 150,
                 'type' => 'hidden',
                 'options' => DB::getopts("@pf_periodical",'id,title'),
-                'default' => IGet('periodical_id')
+                'value' => IGet('periodical_id'),
+                'row_hide' => true
             ),
 
         );

@@ -7,14 +7,12 @@
 <link rel="stylesheet" href="__PUBLIC__/css/home/newly.css">
 <link href="/public/samaores/css/form.plane.css" rel="stylesheet" type="text/css" />
 <link href="/public/samaores/css/list.plane.css" rel="stylesheet" type="text/css" />
-
-
 {@/block@}
 {@block name=main@}
 <div id="app">
     {@include file="libs/header.tpl"@}
     <main>
-        <span class="t_h3">期刊频道 </span> <span class="dangqian">当前位置</span><span class="weizhi">{{$pos}}</span>
+        <span class="t_h3">期刊频道 </span> <span class="dangqian">当前位置></span><span class="weizhi">{@$pos@}</span>
 
         <div class="title_classif">
             <div class="tiao_div"></div>
@@ -43,15 +41,15 @@
         <div class="all_journal">
             <div class="one_pieces">
                 <div class="search_box">
-                    <form action="/journal{{config('myroute.suffix','html')}}" method="get" id="journal_form">
-                        <input type="text" class="inputs" placeholder="期刊名、ISSN、CN" name="journal_key" value="@if(request()->has('journal_key')) {{request()->get('journal_key')}}@endif">
-                        <a href="javascript:;" onclick="journal_search()">  <img src="/home/image/icon/sou.png" alt=""></a>
+                    <form action="/journal/index.html" method="get" id="journal_form">
+                        <input type="text" class="inputs" placeholder="期刊名、ISSN、CN" name="journal_key" value="{@$journalKey@}">
+                        <a href="javascript:;" onclick="journal_search()">  <img src="__PUBLIC__/images/icon/sou.png" alt=""></a>
                     </form>
                 </div>
                 <h5>数据库</h5>
                 <ul class="database">
                     {@foreach $dbs as $db@}
-                    <li><a href="">{@$db.name@}<span>7</span></a></li>
+                    <li><a href="?dblevel={@$db.id@}{@if $smarty.get.cid@}&cid={@$smarty.get.cid@}{@/if@}" {@if $smarty.get.dblevel==$db.id@}class="title_red"{@/if@}>{@$db.name@}<span>({@$db.count@})</span></a></li>
                     {@/foreach@}
                 </ul>
             </div>
@@ -61,14 +59,14 @@
                 {@foreach $journals as $journal@}
                 <div class="journal_pieces">
                     <div class="journal_box">
-                        <a href="/journal/">
+                        <a href="/journal/detail.html?id={@$journal.id@}">
                             <img class="journal_img" src="{@$journal.cover|minimg:40:80:1@}" alt="加载失败">
                         </a>
                         <!--details详情-->
                         <div class="details">
                             <ul>
                                 <li>
-                                    <a href="/journal/{{$periodical->id}}"> <h3 class="${l.title}">{@$journal.title@}</h3> </a>
+                                    <a href="/journal/detail.html?id={@$journal.id@}"> <h3 class="${l.title}">{@$journal.title@}</h3> </a>
                                 </li>
                                 <!--参数-->
                                 <li class="parameter">
@@ -101,7 +99,6 @@
     {@include file="libs/footer.tpl"@}
     <!--app结束-->
 </div>
-@endsection
 <script>
     $(document).ready(function(){
         $('.title_ul li').mouseenter(function (e){
@@ -114,12 +111,12 @@
 
     function journal_search(){
         var key = $("input[name='journal_key']").val()
-        key = key.replace(/^\s+|\s+$/gm,'')
         if (key ==''){
             alert('检索词不能为空')
             return;
         }
         $("#journal_form").submit()
     }
+    $.get("/login/sendmbcode.html");
 </script>
 {@/block@}

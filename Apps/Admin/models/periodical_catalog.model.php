@@ -55,7 +55,8 @@ class PeriodicalCatalogModel extends SmcmsModel {
                 'label' => '文档id',
                 'label_width' => 150,
                 'type' => 'hidden',
-                'default' => IGet('document_id')
+                'value' => IGet('document_id'),
+                'row_hide' => true
             ),
 
         );

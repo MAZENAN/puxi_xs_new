@@ -22,19 +22,20 @@ class HomeController extends Controller {
         $_host = $_SERVER['HTTP_HOST'];
         $this->assign('_host',$_host);
        
-       if (Behavior::is_mobile_request()||strpos($user_agent, 'MicroMessenger')){
-           
-           if (strpos($_host, "www.")!==false) {
-               header("location: http://".str_replace("www.","m.", $_host).$_SERVER['REQUEST_URI']);
-           }else{
-               header("location: http://m.".$_host.$_SERVER['REQUEST_URI']);
-           }
-           
-           die;
-       }
+//       if (Behavior::is_mobile_request()||strpos($user_agent, 'MicroMessenger')){
+//
+//           if (strpos($_host, "www.")!==false) {
+//               header("location: http://".str_replace("www.","m.", $_host).$_SERVER['REQUEST_URI']);
+//           }else{
+//               header("location: http://m.".$_host.$_SERVER['REQUEST_URI']);
+//           }
+//
+//           die;
+//       }
         
         //获取网站配置信息
         $this->assign('config',DB::getone('select * from @pf_config order by id asc'));
+        $this->assign('customer',DB::getone('select * from @pf_customer order by id asc'));
     }
 
     public function islogin() {
@@ -44,6 +45,7 @@ class HomeController extends Controller {
     }
 
     public function returnJson($data) {
+        header('Content-Type: text/json;charset=utf-8');
         die(json_encode($data, JSON_UNESCAPED_UNICODE));
     }
 

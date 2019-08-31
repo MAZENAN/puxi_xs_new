@@ -1,5 +1,5 @@
 <?php
-class AboutController extends Controller {
+class AboutController extends HomeController {
 
     public function indexAction(){
         $this->display('about.tpl');

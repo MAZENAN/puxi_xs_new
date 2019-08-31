@@ -38,7 +38,7 @@ class CustomerModel extends SmcmsModel {
 'weixin' => array (
 'label' => '官方微信',
 'label_width' => 200,
-'type' => 'upimg',
+'type' => 'text',
 'img_width' => 300,
 'img_height' => 200,
 'extensions' => 'jpg,jpeg,gif,png',

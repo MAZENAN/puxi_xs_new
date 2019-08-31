@@ -40,10 +40,10 @@
 <td align="center">{@$rs.periodical_id|smval:'@pf_periodical':'title'|default:'--'@}</td>
 
 <td align="center">
-    <a dialog="1" class="samao-link-minibtn" href="__SELF__/show?id={@$rs.id@}">详情</a>
     <a dialog="1" class="samao-link-minibtn" href="/admin/periodical_catalog?document_id={@$rs.id@}">目录管理</a>
-    <a dialog="1" class="samao-link-minibtn" href="/admin/periodical_paper?document_id={@$rs.id@}?periodical_id={@IGet('periodical_id')@}">期刊论文</a>
+    <a dialog="1" class="samao-link-minibtn" href="/admin/periodical_paper?document_id={@$rs.id@}&periodical_id={@IGet('periodical_id')@}">期刊论文</a>
     <a class="samao-link-minibtn" href="__SELF__/edit?id={@$rs.id@}">编辑</a>
+    <a class="samao-link-minibtn" href="__SELF__/set{@if $rs.allow==1@}off{@else@}on{@/if@}_allow?id={@$rs.id@}">{@if $rs.allow==0@}上架{@else@}下架{@/if@}</a>
     <a onclick="return confirm('确定要删除吗？一旦删除将无法恢复，请谨慎操作！');" class="samao-link-minibtn" href="__SELF__/delete?id={@$rs.id@}">删除</a>
 </td>
 {@/block@}

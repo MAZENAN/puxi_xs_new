@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2019-08-29 00:15:15
+<?php /* Smarty version Smarty-3.1.19, created on 2019-08-31 21:46:53
          compiled from ".\Apps\Home\views\about.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:265975d66a893536d42-23143575%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:59805d6a7a4daa9f50-73267049%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -13,31 +13,31 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6dbd9eb7f662b4a53b788479749f2f1ab8de17cb' => 
     array (
       0 => '.\\Apps\\Home\\views\\libs\\layout1.tpl',
-      1 => 1567000692,
+      1 => 1567255089,
       2 => 'file',
     ),
     '5a79c665eecc3fa21c92d91e5c40b6cac9fcfcbb' => 
     array (
       0 => '.\\Apps\\Home\\views\\libs\\header.tpl',
-      1 => 1567001614,
+      1 => 1567254631,
       2 => 'file',
     ),
     'da3aa1759d4b74d8766b6ba3a5a0793d73ca4936' => 
     array (
       0 => '.\\Apps\\Home\\views\\libs\\footer.tpl',
-      1 => 1567001131,
+      1 => 1567243677,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '265975d66a893536d42-23143575',
+  'nocache_hash' => '59805d6a7a4daa9f50-73267049',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5d66a893598774_48962676',
+  'unifunc' => 'content_5d6a7a4db21327_02488116',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5d66a893598774_48962676')) {function content_5d66a893598774_48962676($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5d6a7a4db21327_02488116')) {function content_5d6a7a4db21327_02488116($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -57,8 +57,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 <?php /*  Call merged included template "libs/header.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("libs/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '265975d66a893536d42-23143575');
-content_5d66a893588ca3_57331782($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("libs/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '59805d6a7a4daa9f50-73267049');
+content_5d6a7a4db01080_04638135($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "libs/header.tpl" */?>
 <div class="table">
@@ -119,8 +119,8 @@ $_smarty_tpl = array_pop($_tpl_stack);
 </div>
 <?php /*  Call merged included template "libs/footer.tpl" */
 $_tpl_stack[] = $_smarty_tpl;
- $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("libs/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '265975d66a893536d42-23143575');
-content_5d66a8935931d1_66289614($_smarty_tpl);
+ $_smarty_tpl = $_smarty_tpl->setupInlineSubTemplate("libs/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0, '59805d6a7a4daa9f50-73267049');
+content_5d6a7a4db197b2_56789684($_smarty_tpl);
 $_smarty_tpl = array_pop($_tpl_stack); 
 /*  End of included template "libs/footer.tpl" */?>
 <script>
@@ -135,15 +135,14 @@ $_smarty_tpl = array_pop($_tpl_stack);
 <script>
 	function search(){
 		var searchText=$("input[name='key']").val()
-		searchText = searchText.replace(/[\/]+/g,'')
 		searchText = searchText.trim()
 		if(searchText.length==0){
 			alert("输入的内容不能为空");
 			return;
 		}
 		/*跳转传值*/
-		var searchUrl = '/search/' //使用encodeURI编码
-		location.href = searchUrl+searchText;
+		var searchUrl = '/search/index.html?words=' //使用encodeURI编码
+		location.href = searchUrl+encodeURIComponent(searchText);
 	}
 	$("#headerbtn").click(function (){
 		search();
@@ -158,17 +157,17 @@ $_smarty_tpl = array_pop($_tpl_stack);
 </script>
 </body>
 </html><?php }} ?>
-<?php /* Smarty version Smarty-3.1.19, created on 2019-08-29 00:15:15
+<?php /* Smarty version Smarty-3.1.19, created on 2019-08-31 21:46:53
          compiled from ".\Apps\Home\views\libs\header.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_5d66a893588ca3_57331782')) {function content_5d66a893588ca3_57331782($_smarty_tpl) {?><header id="header">
+<?php if ($_valid && !is_callable('content_5d6a7a4db01080_04638135')) {function content_5d6a7a4db01080_04638135($_smarty_tpl) {?><header id="header">
 	<div class="header">
 		<div class="logo">
 			<a href="/"> <img src="/public/images/home/logohen.png" alt=""></a>
 		</div>
 		<div class="lists">
 			<div class="title_list">
-				<a href="/journal/index.html">首页</a>
-				<a href="/usercenter/collection{{config('myroute.suffix','html')}}" id="shoucang">订阅收藏</a>
+				<a href="/index/index.html">首页</a>
+				<a href="/user/collect.html" id="shoucang">订阅收藏</a>
 				<a href="#" class="tougao" >立即投稿</a>
 				<a href="/about/index.html">关于我们</a>
 			</div>
@@ -176,46 +175,52 @@ $_smarty_tpl = array_pop($_tpl_stack);
 		</div>
 		<div class="search">
 			<div>
-				<input type="text" placeholder="请输入搜索的内容" name="key" value="@if(isset($key)) {{$key}} @endif"> <button class="btn" id="headerbtn">搜索</button>
+				<input type="text" placeholder="请输入搜索的内容" name="key" value="<?php echo $_smarty_tpl->tpl_vars['word']->value;?>
+"> <button class="btn" id="headerbtn">搜索</button>
 			</div>
 
 		</div>
-		@if(Auth::guard('member')->check())
-		<div class="welcome huanying">
-			<div>
-				<span class="sessname">{{Auth::guard('member')->user()->username}}</span> <a id="zhuxiao" href="/account/logout">注销</a>
-			</div>
 
-		</div>
-		@else
+
+		<?php if (empty($_smarty_tpl->tpl_vars['user']->value['id'])||empty($_smarty_tpl->tpl_vars['user']->value['name'])) {?>
 		<div class="login denglu">
 			<div>
-				<a href="/account/login.html?redirect_url={{request()->fullUrl()}}">登录</a>
-				<a href="/account/register.html">注册</a>
+				<a href="/login/index.html">快速登录</a>
+				<!--<a href="/account/register.html">注册</a>-->
 			</div>
 		</div>
-		@endif
+		<?php } else { ?>
+		<div class="welcome huanying">
+			<div>
+				<span class="sessname"><?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
+</span> <a id="zhuxiao" href="/login/out.html">注销</a>
+			</div>
+
+		</div>
+		<?php }?>
 	</div>
 	<div class="he_top"> </div>
 	<div class="contact_us">
-		<img class="us_img" src="/home/image/icon/guanbi.png" alt="">
-		<p>电话：{{$site->phone}}</p>
+		<img class="us_img" src="/public/images/icon/guanbi.png" alt="">
+		<p>电话：<?php echo $_smarty_tpl->tpl_vars['customer']->value['tel'];?>
+</p>
 
-		<p>咨询微信：{{$site->wechat}}</p>
+		<p>咨询微信：<?php echo $_smarty_tpl->tpl_vars['customer']->value['weixin'];?>
+</p>
 		<!-- <p>投稿邮箱：88888888@qq.com </p> -->
 
 
 	</div>
 </header><?php }} ?>
-<?php /* Smarty version Smarty-3.1.19, created on 2019-08-29 00:15:15
+<?php /* Smarty version Smarty-3.1.19, created on 2019-08-31 21:46:53
          compiled from ".\Apps\Home\views\libs\footer.tpl" */ ?>
-<?php if ($_valid && !is_callable('content_5d66a8935931d1_66289614')) {function content_5d66a8935931d1_66289614($_smarty_tpl) {?><footer id="footer">
+<?php if ($_valid && !is_callable('content_5d6a7a4db197b2_56789684')) {function content_5d6a7a4db197b2_56789684($_smarty_tpl) {?><footer id="footer">
     <div class="footer1">
         <div class="guanyu">
             <h2>关于我们</h2>
             <p>普西学术集成海量学术资源，为科研工作者提供，全面快捷的学术服务。</p>
             <p>在这里我们保持学习的态度，不忘初心，砥砺前行。</p>
-            <a href="/aboutus{{config('myroute.suffix','html')}}">了解更多>>>></a>
+            <a href="/about/index.html">了解更多>>>></a>
         </div>
         <div class="lianxi">
             <h3>联系我们</h3>
@@ -224,13 +229,17 @@ $_smarty_tpl = array_pop($_tpl_stack);
                 <!-- <a href="#"> <img src="./image/weixin.png" alt=""></a>
                 <a href="#"> <img src="./image/QQ.png" alt=""></a>
                 <a href="#"> <img src="./image/weibo.png" alt=""></a> -->
-                        <p>咨询电话：{{$site->phone}}</p><br>
-                        <p>咨询微信：{{$site->wechat}}</p>
+                   		<p>电话：<?php echo $_smarty_tpl->tpl_vars['customer']->value['tel'];?>
+</p>
+
+		<p>咨询微信：<?php echo $_smarty_tpl->tpl_vars['customer']->value['weixin'];?>
+</p>
 
                     </span>
         </div>
     </div>
     <div class="footer2">
-        <span>{{$site->copyright}}</span>
+        <span><?php echo $_smarty_tpl->tpl_vars['config']->value['keep'];?>
+</span>
     </div>
 </footer><?php }} ?>

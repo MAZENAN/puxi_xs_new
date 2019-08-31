@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2019-08-29 08:21:02
+<?php /* Smarty version Smarty-3.1.19, created on 2019-08-31 22:33:32
          compiled from ".\Apps\Admin\views\layout\periodical_catalog_list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:320475d671a6e8c3f64-56479372%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:256825d6a853c4b5f14-29691142%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'fd353b9ce439f058c7e9d78cf2d373636bd70c93' => 
     array (
       0 => '.\\Apps\\Admin\\views\\layout\\periodical_catalog_list.tpl',
-      1 => 1566971046,
+      1 => 1567261339,
       2 => 'file',
     ),
     '88b69de7b0d997dd481b4cda5bcc28e873f074d4' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '320475d671a6e8c3f64-56479372',
+  'nocache_hash' => '256825d6a853c4b5f14-29691142',
   'function' => 
   array (
   ),
@@ -27,9 +27,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5d671a6e95e4f2_60348861',
+  'unifunc' => 'content_5d6a853c5468c8_31298939',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5d671a6e95e4f2_60348861')) {function content_5d671a6e95e4f2_60348861($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_sortopt')) include 'E:\\WWW\\puxi\\samao\\smarty\\ext\\plugins\\modifier.sortopt.php';
+<?php if ($_valid && !is_callable('content_5d6a853c5468c8_31298939')) {function content_5d6a853c5468c8_31298939($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_sortopt')) include 'E:\\WWW\\puxi\\samao\\smarty\\ext\\plugins\\modifier.sortopt.php';
 if (!is_callable('smarty_function_pagebar')) include 'E:\\WWW\\puxi\\samao\\smarty\\ext\\plugins\\function.pagebar.php';
 ?><!doctype html>
 <html>
@@ -85,8 +85,6 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
 </td>
 
 <td align="center">
-    <a dialog="1" class="samao-link-minibtn" href="/admin/periodical_catalog/show?id=<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>
-">详情</a>
     <a class="samao-link-minibtn" href="/admin/periodical_catalog/edit?id=<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>
 ">编辑</a>
     <a onclick="return confirm('确定要删除吗？一旦删除将无法恢复，请谨慎操作！');" class="samao-link-minibtn" href="/admin/periodical_catalog/delete?id=<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>

@@ -597,5 +597,17 @@ class Comm {
         return $tags;
     }
 
+    public static function getCycle($cycle){
+        $arr = [
+            '1' => '旬刊',
+            '2' => '半月刊',
+            '3' => '月刊',
+            '4' => '双月刊',
+            '5' => '季刊',
+            '6' => '半年刊',
+            '7' => '年刊',
+        ];
 
+        return isset($arr[$cycle]) ? $arr[$cycle] : '';
+    }
 }

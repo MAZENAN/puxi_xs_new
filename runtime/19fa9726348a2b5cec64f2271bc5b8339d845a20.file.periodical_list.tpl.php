@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2019-08-29 09:42:18
+<?php /* Smarty version Smarty-3.1.19, created on 2019-08-31 22:33:26
          compiled from ".\Apps\Admin\views\layout\periodical_list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:251105d672d7a9b06d9-45090224%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:243015d6a8536330392-08834717%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '19fa9726348a2b5cec64f2271bc5b8339d845a20' => 
     array (
       0 => '.\\Apps\\Admin\\views\\layout\\periodical_list.tpl',
-      1 => 1566962068,
+      1 => 1567260288,
       2 => 'file',
     ),
     '88b69de7b0d997dd481b4cda5bcc28e873f074d4' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '251105d672d7a9b06d9-45090224',
+  'nocache_hash' => '243015d6a8536330392-08834717',
   'function' => 
   array (
   ),
@@ -27,9 +27,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5d672d7aa39968_04632614',
+  'unifunc' => 'content_5d6a85363e0e00_64806209',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5d672d7aa39968_04632614')) {function content_5d672d7aa39968_04632614($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_minimg')) include 'E:\\WWW\\puxi\\samao\\smarty\\ext\\plugins\\modifier.minimg.php';
+<?php if ($_valid && !is_callable('content_5d6a85363e0e00_64806209')) {function content_5d6a85363e0e00_64806209($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_minimg')) include 'E:\\WWW\\puxi\\samao\\smarty\\ext\\plugins\\modifier.minimg.php';
 if (!is_callable('smarty_function_pagebar')) include 'E:\\WWW\\puxi\\samao\\smarty\\ext\\plugins\\function.pagebar.php';
 ?><!doctype html>
 <html>
@@ -54,6 +54,10 @@ if (!is_callable('smarty_function_pagebar')) include 'E:\\WWW\\puxi\\samao\\smar
 <div class="smbox-list-toptab">
     <form method="get" id="target-form">
         <a class="samao-link-btn samao-link-btn-add" href="/admin/periodical/add">新增</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="samao-link-btn samao-link-btn-refresh" href="javascript:window.location.reload()">刷新</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <?php echo FormBox::text(array('style'=>"width:120px",'name'=>"title",'value'=>((string)$_smarty_tpl->tpl_vars['sch']->value['title']),'placeholder'=>'请输入期刊名',),$_smarty_tpl->tpl_vars['model']->value);?>
+        <input type="submit" value="查找" class="samao-mini-btn samao-mini-btn-search"/>
     </form>
 </div>
 
@@ -87,9 +91,11 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
 <td align="center">
     <!--<a dialog="1" class="samao-link-minibtn" href="/admin/periodical/show?id={ @ $rs.id@}">详情</a> -->
     <a dialog="1" class="samao-link-minibtn" href="/admin/document?periodical_id=<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>
-">期刊上传</a>
+">期刊 论文上传</a>
     <a class="samao-link-minibtn" href="/admin/periodical/edit?id=<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>
 ">编辑</a>
+    <a class="samao-link-minibtn" href="/admin/periodical/set<?php if ($_smarty_tpl->tpl_vars['rs']->value['allow']==1) {?>off<?php } else { ?>on<?php }?>_allow?id=<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>
+"><?php if ($_smarty_tpl->tpl_vars['rs']->value['allow']==0) {?>上架<?php } else { ?>下架<?php }?></a>
     <a onclick="return confirm('确定要删除吗？一旦删除将无法恢复，请谨慎操作！');" class="samao-link-minibtn" href="/admin/periodical/delete?id=<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>
 ">删除</a>
 </td>

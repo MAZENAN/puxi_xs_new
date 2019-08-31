@@ -17,5 +17,5 @@ return array(
     'sql' => '',
     'sqlargs' => NULL,
     'usingfy' => '1',
-    'orderby' => 'id desc',
+    'orderby' => 'year desc, phase ',
 );

@@ -1,25 +1,14 @@
 <?php
-$type = SGet('type');
-$this->assign("type", $type);
 $seachAry = array(
-            1 => array(
-                'name' => 'mobile',
-                'label' => 'mobile',
-                'boxname' => 'mobile',
-                'type' => 'text',
-                'schtp' => '0',
-                'style' => '',
-                'css' => '',
-            ),
-            2 => array(
-                'name' => 'type',
-                'label' => 'type',
-                'boxname' => 'type',
-                'type' => 'text',
-                'schtp' => '2',
-                'style' => '',
-                'css' => '',
-            ),
+    1 => array(
+        'name' => 'mobile',
+        'label' => 'mobile',
+        'boxname' => 'mobile',
+        'type' => 'text',
+        'schtp' => '0',
+        'style' => '',
+        'css' => '',
+    )
 );
 
 return array(

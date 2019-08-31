@@ -11,7 +11,17 @@ return array(
             'schtp' => '1',
             'style' => '',
             'css' => '',
-        )
+        ),
+
+        array (
+            'name' => 'title',
+            'label' => '论文名',
+            'boxname' => 'title',
+            'type' => 'text',
+            'schtp' => '0',
+            'style' => 'width:120px',
+            'css' => '',
+        ),
     ),
     'usesql' => '0',
     'sql' => '',

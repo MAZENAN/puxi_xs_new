@@ -1,10 +1,10 @@
 <?php return array (
   'aliyunSms' => array(
-        'AccessKeyID' => 'LTAIkfMdu0F7R25l', 
-        'AccessKeySecret' => 'uBPr1AK5sRFkcQrDFQwQPe2nL5CF9y',
-        'LoginTemplateId'=>'SMS_153690326', 
+        'AccessKeyID' => 'LTAILuuzG1ZdP5Zn',
+        'AccessKeySecret' => 'Ic8tlmJXxpUxkkBgnhdJ7DoHrXK2U5',
+        'LoginTemplateId'=>'SMS_173340854',
         'ModifyPwdTemplateId'=>'SMS_153690323', 
-        'RegTemplateId'=>'SMS_153690324', 
-        'Sign'=>'亿丰储物网络科技'
+        'RegTemplateId'=>'SMS_173340854',
+        'Sign'=>'普西学术'
     ),
 );

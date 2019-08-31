@@ -2,7 +2,17 @@
 
 return array(
     'model' => 'Periodical',
-    'search' => NULL,
+    'search' => array(
+        array (
+            'name' => 'title',
+            'label' => '期刊名',
+            'boxname' => 'title',
+            'type' => 'text',
+            'schtp' => '0',
+            'style' => 'width:120px',
+            'css' => '',
+        ),
+    ),
     'usesql' => '0',
     'sql' => '',
     'sqlargs' => NULL,

@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2019-08-29 10:25:02
+<?php /* Smarty version Smarty-3.1.19, created on 2019-08-31 22:33:24
          compiled from ".\Apps\Admin\views\left.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:80265d67377eb24ca0-30632620%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:42995d6a8534c6b942-43709425%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '80265d67377eb24ca0-30632620',
+  'nocache_hash' => '42995d6a8534c6b942-43709425',
   'function' => 
   array (
   ),
@@ -23,9 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5d67377eb56202_72610491',
+  'unifunc' => 'content_5d6a8534ca6a66_80849891',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5d67377eb56202_72610491')) {function content_5d67377eb56202_72610491($_smarty_tpl) {?><dl style="margin-top:10px;">
+<?php if ($_valid && !is_callable('content_5d6a8534ca6a66_80849891')) {function content_5d6a8534ca6a66_80849891($_smarty_tpl) {?><dl style="margin-top:10px;">
     <dd><a href="/admin/index/welcome" hidefocus="true" target="Main">后台首页</a></dd>
 </dl>
 <?php  $_smarty_tpl->tpl_vars['item'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['item']->_loop = false;

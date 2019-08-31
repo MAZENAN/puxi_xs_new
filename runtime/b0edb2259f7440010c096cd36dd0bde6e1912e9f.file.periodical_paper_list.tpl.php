@@ -1,13 +1,13 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2019-08-29 08:21:00
+<?php /* Smarty version Smarty-3.1.19, created on 2019-08-31 22:33:39
          compiled from ".\Apps\Admin\views\layout\periodical_paper_list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:156085d671a6c5951e1-58416978%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:150825d6a8543e245b9-19207214%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b0edb2259f7440010c096cd36dd0bde6e1912e9f' => 
     array (
       0 => '.\\Apps\\Admin\\views\\layout\\periodical_paper_list.tpl',
-      1 => 1566971513,
+      1 => 1567261317,
       2 => 'file',
     ),
     '88b69de7b0d997dd481b4cda5bcc28e873f074d4' => 
@@ -17,7 +17,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '156085d671a6c5951e1-58416978',
+  'nocache_hash' => '150825d6a8543e245b9-19207214',
   'function' => 
   array (
   ),
@@ -27,9 +27,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5d671a6c68b357_71585700',
+  'unifunc' => 'content_5d6a8543ec1240_38258825',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5d671a6c68b357_71585700')) {function content_5d671a6c68b357_71585700($_smarty_tpl) {?><?php if (!is_callable('smarty_function_pagebar')) include 'E:\\WWW\\puxi\\samao\\smarty\\ext\\plugins\\function.pagebar.php';
+<?php if ($_valid && !is_callable('content_5d6a8543ec1240_38258825')) {function content_5d6a8543ec1240_38258825($_smarty_tpl) {?><?php if (!is_callable('smarty_function_pagebar')) include 'E:\\WWW\\puxi\\samao\\smarty\\ext\\plugins\\function.pagebar.php';
 ?><!doctype html>
 <html>
 <head>
@@ -55,6 +55,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <a class="samao-link-btn samao-link-btn-add" href="/admin/periodical_paper/add?document_id=<?php echo IGet('document_id');?>
 &periodical_id=<?php echo IGet('periodical_id');?>
 ">新增</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="samao-link-btn samao-link-btn-refresh" href="javascript:window.location.reload()">刷新</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <?php echo FormBox::text(array('style'=>"width:120px",'name'=>"title",'value'=>((string)$_smarty_tpl->tpl_vars['sch']->value['title']),'placeholder'=>'请输入论文名',),$_smarty_tpl->tpl_vars['model']->value);?>
+        <input type="submit" value="查找" class="samao-mini-btn samao-mini-btn-search"/>
     </form>
 </div>
 
@@ -90,10 +94,10 @@ $_smarty_tpl->tpl_vars['rs']->_loop = true;
 </td>
 
 <td align="center">
-    <a dialog="1" class="samao-link-minibtn" href="/admin/periodical_paper/show?id=<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>
-">详情</a>
     <a class="samao-link-minibtn" href="/admin/periodical_paper/edit?id=<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>
 ">编辑</a>
+    <a class="samao-link-minibtn" href="/admin/periodical_paper/set<?php if ($_smarty_tpl->tpl_vars['rs']->value['allow']==1) {?>off<?php } else { ?>on<?php }?>_allow?id=<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>
+"><?php if ($_smarty_tpl->tpl_vars['rs']->value['allow']==0) {?>上架<?php } else { ?>下架<?php }?></a>
     <a onclick="return confirm('确定要删除吗？一旦删除将无法恢复，请谨慎操作！');" class="samao-link-minibtn" href="/admin/periodical_paper/delete?id=<?php echo $_smarty_tpl->tpl_vars['rs']->value['id'];?>
 ">删除</a>
 </td>

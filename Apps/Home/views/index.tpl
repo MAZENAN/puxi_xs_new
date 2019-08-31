@@ -6,13 +6,17 @@
 {@/block@}
 {@block name=main@}
 <header>
-    <div class="welcome">
-        <span class="sessname"></span>
-        <a  href="/account/logout" id="zhuxiao"> 注销</a>
-    </div>
+
+    {@if empty($user.id) || empty($user.name) @}
     <div class="login">
-        <a href="account/login{{config('myroute.suffix','html')}}?redirect_url=">登录</a> <a href="account/register">注册</a>
+        <a href="/login/index.html">快速登录</a> <!--<a href="account/register">注册</a>-->
     </div>
+    {@else@}
+    <div class="welcome">
+        <span class="sessname">{@$user.name@}</span>
+        <a  href="/login/out.html" id="zhuxiao"> 注销</a>
+    </div>
+    {@/if@}
 </header>
 <main>
     <div class="logo">
@@ -25,17 +29,17 @@
 </main>
 <!--联系我们-->
 <div class="contact_us">
-    <img class="us_img" src="/home/image/icon/guanbi.png" alt="">
+    <img class="us_img" src="__PUBLIC__/images/icon/guanbi.png" alt="">
     <p>普西学术网</p>
-    <p>电话：{{$site->phone}}</p>
+    <p>电话：{@$customer.tel@}</p>
 
-    <p>咨询微信：{{$site->wechat}}</p>
+    <p>咨询微信：{@$customer.weixin@}</p>
     <!-- <p>投稿邮箱：88888888@qq.com </p> -->
 
 </div>
 <footer>
 
-    <a id="dingyue" class="bot_nav" href="usercenter/collection{{config('myroute.suffix','html')}}">
+    <a id="dingyue" class="bot_nav" href="/user/collect.html">
         <img src="__PUBLIC__/images/home/shoucang.png" alt="">
         <p>订阅收藏</p>
     </a>
@@ -62,13 +66,12 @@
     /*搜索*/
     function search(){
         var searchText=$("input[name='inp']").val()
-        searchText = searchText.replace(/[\/]+/g, "")
         if(searchText.length==0){
             alert("输入的内容不能为空");
             return;
         }
         /*跳转传值*/
-        var searchUrl = 'search/' //使用encodeURI编码
+        var searchUrl = '/search/index.html?words=' //使用encodeURI编码
         location.href = searchUrl+encodeURIComponent(searchText);
     }
     /*鼠标点击*/

@@ -4,7 +4,7 @@ html,body{
 }
 body{
     font-family: "华文细黑";
-    background:url("../image/bjtu.png") no-repeat;
+    background:url("/public/images/home/bjtu.png") no-repeat;
     background-size: cover;
     margin: 0 auto;
     
@@ -12,7 +12,7 @@ body{
 .loginbox{
     width:28rem;
     height:100%;
-    background: url("../image/kpjb.png") no-repeat;
+    background: url("/public/images/home/kpjb.png") no-repeat;
     background-size: 100%;
     position: relative;
     margin-left: 50%;
