@@ -112,13 +112,13 @@ body{
     display: block;
 }
 .phone-err{
-        color: red;
+        color: red !important;
         position:fixed;
         width:500px;
-        height: 10rem;
+        height: 10rem !important;
         height:2.75rem;
         top: 40%;
-        left: 40%;
+        left: 36%;
         z-index: 10;
         background-image: url("/public/images/home/lianxi.jpg");
         background-size: 100%;

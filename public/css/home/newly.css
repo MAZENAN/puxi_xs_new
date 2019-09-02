@@ -1,4 +1,15 @@
-
+*{
+    font-size: 16px !important;
+}
+.samao-pagebar .pagebar a{
+   padding: 0.25rem 0.8rem !important;
+}
+.samao-pagebar .pagebar b{
+	padding: 0.25rem 0.8rem !important;
+}
+.search div input {
+    width: 11rem !important;
+}
 main{
     width: 70%;
     margin:20px auto 0 auto;  
@@ -186,8 +197,8 @@ main .t_h3{
 
 /*<!--里面所有期刊-->图片*/
 .journal_img{
-    width: 5.5rem;
-    height: 7.5rem;
+    width: 6.5rem;
+    height: 8.5rem;
 }
 /*<!--details详情-->*/
 .journal_box .details{
@@ -308,5 +319,10 @@ footer{
     .page-bar{
         width: 95%;
     }
-    
+    .journal_box{
+        margin: 20px 0px 0px 0px !important;
+    }
+    .details ul li {
+        margin: 2px 0px 6px 8px !important;
+    }
 }
