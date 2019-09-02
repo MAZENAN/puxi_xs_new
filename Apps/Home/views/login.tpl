@@ -38,6 +38,11 @@
         <img src="__PUBLIC__/images/home/logohen.png" alt="">
     </div>
 </div>
+
+<div class="phone-err">
+    <img class="us_img" src="__PUBLIC__/images/icon/guanbi.png" alt="">
+    <p>手机号格式不正确</p>
+</div>
 {@include file="libs/footer.tpl"@}
 <script type="text/javascript">
     var countdown = 60;
@@ -93,7 +98,8 @@
         var phonenum = $("#account").val();
         var reg = /^1[34578]\d{9}$/;
         if (!reg.test(phonenum)) {
-            alert('请输入有效的手机号码！');
+
+            $(".phone-err").css("display","block");
             return false;
         } else {
             return true;
@@ -114,5 +120,9 @@
         }
         return false;
     });
+ /*手机号错误显示*/
+    $(".us_img").click(function (){
+        $(".phone-err").css("display","none")
+    })
 </script>
 {@/block@}

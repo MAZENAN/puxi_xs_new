@@ -111,7 +111,38 @@ body{
     font-size: 14px;
     display: block;
 }
-
+.phone-err{
+        color: red;
+        position:fixed;
+        width:500px;
+        height: 10rem;
+        height:2.75rem;
+        top: 40%;
+        left: 40%;
+        z-index: 10;
+        background-image: url("/public/images/home/lianxi.jpg");
+        background-size: 100%;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: 800;
+        color: #27292C;
+        display: none;
+}
+.phone-err p{
+    margin: 2.7rem 0;
+}
+.us_img{
+    position: absolute;
+    right: 12px;
+    transform: rotate(0deg);
+    width: 20px;
+    transition: all 0.5s;
+  }
+  .us_img:hover{transition: all 1s;
+    transform: rotate(180deg);
+    width: 23px;
+  }
 @media screen and (max-width:1200px) and (min-width:768px){
     :root{font-size:15px;}
 }
