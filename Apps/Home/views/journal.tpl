@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="__PUBLIC__/css/home/reset.css"><!--reset通用样式-->
 <link rel="stylesheet" href="__PUBLIC__/css/home/header.css"><!--头部样式-->
 <link rel="stylesheet" href="__PUBLIC__/css/home/footer.css"><!--底部样式-->
-<link rel="stylesheet" href="__PUBLIC__/css/home/newly.css">
+<link rel="stylesheet" href="__PUBLIC__/css/home/newly.css?v=1.1">
 <link href="/public/samaores/css/form.plane.css" rel="stylesheet" type="text/css" />
 <link href="/public/samaores/css/list.plane.css" rel="stylesheet" type="text/css" />
 {@/block@}
